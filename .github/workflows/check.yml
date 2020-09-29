@@ -14,4 +14,9 @@ jobs:
         run: sudo apt-get install bibtool moreutils
 
       - name: Check formatting
-        run: ./format.sh --file literature.bib --output output.bib --check
+        run: |
+          ./scripts/format.sh --file se.bib --output se_out.bib --check
+          ./scripts/format.sh --file pos.bib --output pos_out.bib --check
+          ./scripts/format.sh --file ml.bib --output ml_out.bib --check
+          ./scripts/format.sh --file wasm.bib --output wasm_out.bib --check
+          ./scripts/format.sh --file wm.bib --output wm_out.bib --check
